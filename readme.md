@@ -1,7 +1,7 @@
 #Test name
 
 
-Discription of project:
+Discription of this project:
 Test store
 
 
