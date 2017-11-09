@@ -1,0 +1,59 @@
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.bgcolor{
+	background:#c6c6c0;
+}
+*{
+	font-family:Arial;
+}
+.navbar-brand img{
+    height: 70px;
+}
+
+.slogan{
+    font-size: 20px;
+    font-weight: bold;
+}
+.main{
+	margin-top:200px;
+}
+
+.top{
+	margin-top:100px;
+	
+}
+
+.errors  li{
+	list-style:none;
+	color:red;
+}
+
+.list td img{
+	width:100px;
+}
+
+.list td{
+	cursor: pointer;
+}
+
+.red{
+	background:red;
+	color:white;
+}
+
+.green{
+	background:green;
+	color:white;
+}
+.img{
+width:100px;
+}
