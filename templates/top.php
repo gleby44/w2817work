@@ -27,6 +27,7 @@ if($_SESSION['user_id']){
 		 <?php
 		}
 	 ?>
+	  
   </head>
 
   <body>
@@ -46,14 +47,14 @@ if($_SESSION['user_id']){
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="static.php?url=about">О нас</a>
+            <li class="nav-item menu-item">
+              <a class="nav-link menu" href="static.php?url=about" data-body="Здесь вы узнаете больше о нашей компании" data-color="red">О нас</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="static.php?url=services">Услуги</a>
+              <a class="nav-link menu" href="static.php?url=services" data-body="Здесь вы узнаете больше о наших услугах" data-color="red">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="static.php?url=contact">Контакты</a>
+              <a class="nav-link menu" href="static.php?url=contact" data-body="Здесь вы узнаете больше о наших контактах" data-color="red">Контакты</a>
             </li>
 			  <?php
 				
