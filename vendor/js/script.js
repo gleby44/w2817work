@@ -23,7 +23,26 @@ $(function(){
 		var data=$(this).attr('href');
 		if($('.modal-window').length==0){
 		$('<div>').addClass('m-window').appendTo('body');
-		$('<div>').addClass('modal-window').appendTo('body').css('display','none').show(500);
+		$('<div>').addClass('modal-window').appendTo('body').css('display','none').show(100);
+		var url=$(this).attr('href');
+		var get=url.split('?');
+		var id=get[1].split('=');
+		var url=id[1];
+		$.ajax({
+			url: 'ajax.php',
+			type: 'POST',
+			data:'url='+url,
+			
+			success: function (data) {
+				$('.modal-window').append(data);	
+				var str=data[0];
+			},
+			
+			error: function(msg) {
+				$('.modal-window').append(msg);	
+			}
+			
+		})
 		$('.m-window').click(function(){
 			$(this).remove();
 			$('.modal-window').remove();
@@ -31,10 +50,10 @@ $(function(){
 		});
 		$('<a>').attr('href','#').addClass('btn btn-danger close').html('&times;').click(function(){
 			event.preventDefault();
-			$('.modal-window').hide(500);
+			$('.modal-window').hide(100);
 			setTimeout(function(){
 				$('.modal-window').remove();
-			},500)
+			},100)
 			
 			$('.m-window').remove();
 		}).appendTo('.modal-window');

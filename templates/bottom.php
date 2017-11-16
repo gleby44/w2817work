@@ -11,6 +11,16 @@
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="vendor/js/script.js"></script>
+	<?php 
+	if(!empty($scripts)){
+		foreach($scripts as $script){
+			?>
+			<script src="<?php echo $script ?>"></script>
+			<?
+			
+		}
+	}
+	?>
 
   </body>
 
