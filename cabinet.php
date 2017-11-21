@@ -76,6 +76,8 @@ if(!$_SESSION['user_id']){
 				if(!$p_body){
 					$errors[]='Поле body не заполнено';
 				}
+				$p_body=str_replace('<script',"<span>script</span>",$p_body);
+				$p_body=str_replace('</script>',"<span>script</span>",$p_body);
 				if(!$p_price){
 					$errors[]='Поле price не заполнено';
 				}

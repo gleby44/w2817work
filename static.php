@@ -2,6 +2,13 @@
 	<div class="main">
 		<?php if(isset($_GET['url'])){
 			$url=$_GET['url'];
+			$url = trim($url);
+			$url = stripslashes($url);
+			$url = htmlspecialchars($url);
+			$url=str_replace('%27',"",$url);
+			$url=str_replace("'","",$url);
+			$url=str_replace('"',"",$url);
+			$url=str_replace("%","",$url);
 		}else{
 			$url='index';
 		} 
